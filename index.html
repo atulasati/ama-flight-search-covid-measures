@@ -23,13 +23,27 @@
               <h3 class="login-heading mb-4">Welcome to Amadeus Flight Search</h3>
               <form action="/result" method="GET" id="form_id"> 
                   <div class="form-label-group">
-                      <input type="text" name1="Origin" id="inputOrigin" class="form-control ui-autocomplete-input" placeholder="From" required="" autofocus="" autocomplete="off">
-                      <label for="inputOrigin">From</label>
+                      <select class="form-control ui-autocomplete-input" required="" style="
+                      border-radius: 19px;
+                      height: 50px;
+                      padding: 0px 15px;
+                  ">
+                        <option value="">From</option>
+                        <option value="BLR">BANGALORE</option>
+                        <option value="BLR">DELHI</option>
+                      </select>
                   </div>
 
                   <div class="form-label-group">
-                      <input type="text" name1="Destination" id="inputDestination" class="form-control ui-autocomplete-input" placeholder="To" required="" autofocus="" autocomplete="off">
-                      <label for="inputDestination">To</label>
+                      <select class="form-control ui-autocomplete-input" required="" style="
+                      border-radius: 19px;
+                      height: 50px;
+                      padding: 0px 15px;
+                  ">
+                        <option value="">To</option>
+                        <option value="BLR">BANGALORE</option>
+                        <option value="BLR">DELHI</option>
+                      </select>
                   </div>
                   <div class="form-label-group">
                       <input type="date" name1="Departuredate" id="idDeparturedate" class="form-control" placeholder="Departure Date" required="">
