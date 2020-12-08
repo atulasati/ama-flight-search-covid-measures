@@ -1,0 +1,73 @@
+
+<!-- saved from url=(0053)https://amadeus4dev-smart-flightsearch.herokuapp.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="./Amadeus Flight Search_files/style.css">
+    <link rel="stylesheet" href="./Amadeus Flight Search_files/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+    <title>Amadeus Flight Search</title>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
+
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+                
+              <h3 class="login-heading mb-4">Welcome to Amadeus Flight Search</h3>
+              <form action="/result" method="GET" id="form_id"> 
+                  <div class="form-label-group">
+                      <input type="text" name1="Origin" id="inputOrigin" class="form-control ui-autocomplete-input" placeholder="From" required="" autofocus="" autocomplete="off">
+                      <label for="inputOrigin">From</label>
+                  </div>
+
+                  <div class="form-label-group">
+                      <input type="text" name1="Destination" id="inputDestination" class="form-control ui-autocomplete-input" placeholder="To" required="" autofocus="" autocomplete="off">
+                      <label for="inputDestination">To</label>
+                  </div>
+                  <div class="form-label-group">
+                      <input type="date" name1="Departuredate" id="idDeparturedate" class="form-control" placeholder="Departure Date" required="">
+                      <label for="idDeparturedate">Departure Date</label>
+                  </div>
+
+                  <div class="form-label-group">
+                      <input type="date" name1="Returndate" id="idReturndate" class="form-control" placeholder="Return Date">
+                      <label for="idReturndate">Return Date</label>
+                  </div>
+
+                  <div class="form-label-group">
+                      <input type="number" name1="Adults" id="idAdults" class="form-control" placeholder="Adults">
+                      <label for="idAdults">Adults</label>
+                  </div>
+                  <input class="btn btn-lg btn-danger btn-block btn-login text-uppercase font-weight-bold mb-2" type="Submit" name1="Submit" value="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./Amadeus Flight Search_files/popper.min.js.download" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="./Amadeus Flight Search_files/bootstrap.min.js.download" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $("#form_id").on("submit", function (e) {
+        e.preventDefault(); //stop submit event
+        var self = $(this);
+        var originGiven = $("#inputOrigin").val();
+        $("#inputOrigin").val(originGiven.slice(0,3));
+        var destinationGiven = $("#inputDestination").val();
+        $("#inputDestination").val(destinationGiven.slice(0,3));
+        $("#form_id").off("submit");
+        self.submit();
+    });
+    </script>
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><ul id="ui-id-2" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div></body></html>
